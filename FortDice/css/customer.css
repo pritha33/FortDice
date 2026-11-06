@@ -1,0 +1,238 @@
+/* ===== Customer Specific Styles ===== */
+
+.account-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.balance-card {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: rgb(246, 241, 241);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+}
+
+.balance-label {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.balance-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.balance-sub {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.action-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+.action-icon {
+  font-size: 2rem;
+}
+
+.transfer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.transfer-form-wrapper {
+  padding-right: 24px;
+  border-right: 1px solid var(--gray-200);
+}
+
+.recipients-list {
+  padding-left: 24px;
+}
+
+.recipients-list h3 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--gray-600);
+}
+
+.recipient-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--gray-200);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.recipient-card:hover {
+  background: var(--gray-50);
+  border-color: var(--primary-light);
+}
+
+.recipient-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.recipient-name {
+  font-weight: 500;
+}
+
+.recipient-account {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+.balance-display {
+  background: var(--gray-100);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.balance-display strong {
+  color: var(--primary);
+}
+
+.encryption-banner {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.profile-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.profile-info {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.profile-info:last-child {
+  border-bottom: none;
+}
+
+.profile-info .label {
+  color: var(--gray-500);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-info .value {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.encryption-info-card {
+  background: var(--gray-50);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-light);
+}
+
+.encryption-info-card .cipher-badge {
+  display: inline-block;
+  padding: 4px 16px;
+  background: var(--primary-light);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.log-entry {
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+}
+
+.log-entry .log-time {
+  color: var(--gray-500);
+  font-size: 0.7rem;
+}
+
+.log-entry .log-status-success {
+  color: var(--success);
+}
+
+.log-entry .log-status-failed {
+  color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .account-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .transfer-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .transfer-form-wrapper {
+    padding-right: 0;
+    border-right: none;
+  }
+  
+  .recipients-list {
+    padding-left: 0;
+  }
+  
+  .profile-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-actions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

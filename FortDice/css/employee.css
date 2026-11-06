@@ -1,0 +1,85 @@
+/* ===== Employee Specific Styles ===== */
+
+.decrypt-panel {
+  background: linear-gradient(135deg, #f0f4ff, #e8eeff);
+  border: 2px solid var(--primary-light);
+}
+
+.decrypt-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  align-items: end;
+}
+
+.decrypt-form .form-group {
+  margin-bottom: 0;
+}
+
+.decrypt-result {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
+}
+
+.decrypt-result .decrypted-note {
+  font-family: 'Courier New', monospace;
+  padding: 16px;
+  background: var(--gray-50);
+  border-radius: 8px;
+  margin-top: 8px;
+  white-space: pre-wrap;
+}
+
+.security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--success);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.security-badge .lock-icon {
+  font-size: 1rem;
+}
+
+.employee-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.employee-stat-card {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.employee-stat-card .stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.employee-stat-card .stat-label {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+@media (max-width: 768px) {
+  .decrypt-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .employee-stats {
+    grid-template-columns: 1fr;
+  }
+}
